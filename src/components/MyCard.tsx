@@ -121,8 +121,8 @@ const MyCard: React.FC<MyCardProps> = ({ onUpdate }) => {
           >
             Update
           </Button>
-          <Dialog open={isDialogOpen}>
-            <DialogContent className="sm:max-w-[425px]">
+          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+            <DialogContent className="max-w-xs mx-auto sm:max-w-[425px] w-full">
               <DialogHeader>
                 <DialogTitle>Update</DialogTitle>
                 <DialogDescription>
@@ -172,7 +172,7 @@ const MyCard: React.FC<MyCardProps> = ({ onUpdate }) => {
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button variant="outline" onClick={closeDialog}>Close</Button>
+                  <Button variant="outline" onClick={closeDialog} className='mt-2 md:mt-0'>Close</Button>
                   <Button type="submit" className="bg-blue-500 text-white hover:bg-blue-600 hover:text-white">Save changes</Button>
                 </DialogFooter>
               </form>
