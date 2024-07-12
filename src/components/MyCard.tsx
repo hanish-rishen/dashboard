@@ -21,6 +21,7 @@ import {
 import { Label } from "@/components/ui/label"
 
 import { Input } from "@/components/ui/input"
+import Image from 'next/image'; // Add this import
 
 interface MyCardProps {
   onUpdate: (rank: string, percentile: string, score: string) => void;
@@ -106,24 +107,20 @@ const MyCard: React.FC<MyCardProps> = ({ onUpdate }) => {
     <>
       <Card className='w-full'>
         <CardHeader>
-          <img
-            src="/images/html5.svg"
-            alt="HTML5 Logo"
-            style={{ width: '70px', height: '70px', objectFit: 'cover' }}
-          />
+          <Image src="/images/html5.svg" alt="HTML5 Logo" width={70} height={70} objectFit="cover" />
           <CardTitle className='pt-2'>Hyper Text Markup Language</CardTitle>
           <CardDescription className='text-lg pt-2'>
             Questions: 08 | Duration: 15 mins | Submitted on 5 June 2021
           </CardDescription>
         </CardHeader>
         <CardFooter>
-        <Button
-    variant="outline"
-    className="bg-blue-500 text-white hover:bg-blue-600 hover:text-white text-lg px-6 py-6"
-    onClick={() => setIsDialogOpen(true)}
-  >
-    Update
-  </Button>
+          <Button
+            variant="outline"
+            className="bg-blue-500 text-white hover:bg-blue-600 hover:text-white text-lg px-6 py-6"
+            onClick={() => setIsDialogOpen(true)}
+          >
+            Update
+          </Button>
           <Dialog open={isDialogOpen}>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
