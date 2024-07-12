@@ -14,7 +14,7 @@ import {
 
 const Sidebar: React.FC = () => {
   const onlyWidth = useWindowWidth();
-  const mobileWidth = onlyWidth <= 1040;
+  const mobileWidth = onlyWidth < 1024;
 
 
   return (
