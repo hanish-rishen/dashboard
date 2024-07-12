@@ -14,7 +14,7 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogOverlay,
   DialogFooter,
 } from "@/components/ui/dialog"
 
@@ -122,6 +122,7 @@ const MyCard: React.FC<MyCardProps> = ({ onUpdate }) => {
             Update
           </Button>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+            <DialogOverlay />
             <DialogContent className="max-w-xs mx-auto sm:max-w-[425px] w-full">
               <DialogHeader>
                 <DialogTitle>Update</DialogTitle>
