@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import Sidebar from "@/components/Sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import Image from 'next/image'; // Add this import
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,12 +26,14 @@ export default function RootLayout({
       <body className={cn("min-h-screen w-full bg-white text-black flex flex-col", inter.className)}>
         <div className="flex-1 w-full">
           <header className="flex items-center px-4 md:px-8 py-3 md:py-4 border-b text-2xl md:text-4xl font-bold w-full">
-            <img className="w-12 h-12 md:w-16 md:h-16" alt="Logo" src="/images/logo.jpeg" />
+            {/* Replace img with Image */}
+            <Image src="/images/logo.jpeg" alt="Logo" width={48} height={48} className="w-12 h-12 md:w-16 md:h-16" />
             <span className="pl-2 pr-2 md:pl-4 mt-1 md:mt-3 flex-grow">WhatBytes</span>
             <div className="ml-auto">
               <Badge className="p-2 md:p-4" variant="outline">
                 <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
+                  {/* Replace img with Image */}
+                  <AvatarImage src="https://github.com/shadcn.png" width={48} height={48} />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 <span className="ml-2 md:ml-3 text-sm md:text-lg">Hanish Rishen</span>
