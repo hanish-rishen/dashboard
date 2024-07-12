@@ -60,7 +60,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
               href="#"
               className={cn(
                 buttonVariants({ variant: link.variant, size: "sm" }),
-                "lg:p-8 rounded-r-full",
+                "lg:pt-8 pb-8 pl-8 pr-5 rounded-r-full",
                 "justify-start",
                 "text-lg", // Increase font size
                 // Update default variant styles

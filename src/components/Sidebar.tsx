@@ -14,7 +14,8 @@ import {
 
 const Sidebar: React.FC = () => {
   const onlyWidth = useWindowWidth();
-  const mobileWidth = onlyWidth <= 1350;
+  const mobileWidth = onlyWidth <= 1250;
+
 
   return (
     <TooltipProvider>

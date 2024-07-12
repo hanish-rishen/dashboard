@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={cn("min-h-screen w-full bg-white text-black flex flex-col", inter.className)}>
+      <body className={cn("min-h-screen w-full bg-white text-black flex flex-col", inter.className)} style={{ zoom: '80%' }}>
         <div className="flex-1 w-full">
           <header className="flex items-center px-4 md:px-8 py-3 md:py-4 border-b text-2xl md:text-4xl font-bold w-full">
             {/* Replace img with Image */}
