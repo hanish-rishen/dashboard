@@ -11,8 +11,8 @@ import Image from 'next/image'; // Add this import
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WhatBytes",
-  description: "Assignment for WhatBytes",
+  title: "MyDashboard",
+  description: "A Dashboard for students",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
           <header className="flex items-center px-4 md:px-8 py-3 md:py-4 border-b text-2xl md:text-4xl font-bold w-full">
             {/* Replace img with Image */}
             <Image src="/images/logo.jpeg" alt="Logo" width={48} height={48} className="w-12 h-12 md:w-16 md:h-16" />
-            <span className="pl-2 pr-2 md:pl-4 mt-1 md:mt-3 flex-grow">My Dashboard</span>
+            <span className="pl-2 pr-2 md:pl-4 mt-1 md:mt-3 flex-grow">MyDashboard</span>
             <div className="ml-auto">
               <Badge className="p-2 md:p-4" variant="outline">
                 <Avatar>
